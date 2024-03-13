@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Captura de Teclas</title>
+<script>
+    function capturarTecla(event) {
+        var teclaPressionada = event.key;
+        var mensagem = "Você pressionou a tecla: " + teclaPressionada;
+        document.getElementById('mensagem').innerText = mensagem;
+    }
+</script>
+</head>
+<body>
+    <h2>Captura de Teclas</h2>
+    <label for="campoTexto">Digite algo aqui:</label>
+    <input type="text" id="campoTexto" onkeydown="capturarTecla(event)">
+    <br><br>
+    <p id="mensagem"></p>
+</body>
+</html>

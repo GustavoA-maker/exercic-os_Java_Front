@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validador de Formulário</title>
+<script>
+    function validarFormulario() {
+        var campoTexto = document.getElementById('campoTexto');
+        
+        if (campoTexto.value === "") {
+            campoTexto.style.borderColor = "red";
+            return false;
+        } else {
+            campoTexto.style.borderColor = ""; 
+            return true; 
+        }
+    }
+</script>
+</head>
+<body>
+    <h2>Validador de Formulário</h2>
+    <form onsubmit="return validarFormulario()">
+        <label for="campoTexto">Campo de Texto:</label>
+        <input type="text" id="campoTexto">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
